@@ -36,11 +36,15 @@ while (d_i != 0 and d_s != 0):
   d_i = derivada(val_i)
   d_s = derivada(val_s)
 
-if(d_i == 0):
- print "El minimo se encuentra en f("+str(val_i)+") =",evaluar(val_i)
- print "Las iteraciones fueron:", n
+pen = derivada(val_i-0.001)
+if (pen < 0):
+ if(d_i == 0):
+  print "El minimo se encuentra en f("+str(val_i)+") =",evaluar(val_i)
+  print "Las iteraciones fueron:", n
+ else:
+  print "El minimo se encuentra en f("+str(val_s)+") =",evaluar(val_s)
+  print "Las iteraciones fueron:", n
 else:
- print "El minimo se encuentra en f("+str(val_s)+") =",evaluar(val_s)
- print "Las iteraciones fueron:", n
+ print "Solo hay maximo"
 
 
